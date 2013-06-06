@@ -1,0 +1,13 @@
+{
+	"name":"block_test",
+	"initial_id":4000,
+	"label":"Block's Test",
+	"textures"{
+		"top   ":"blocks/test_t.png",
+		"bottom":"blocks/test_b.png",
+		"north" :"blocks/test_n.png",
+		"south" :"blocks/test_s.png",
+		"east" :"blocks/test_t.png",
+		"west" :"blocks/test_w.png"
+	}
+}
