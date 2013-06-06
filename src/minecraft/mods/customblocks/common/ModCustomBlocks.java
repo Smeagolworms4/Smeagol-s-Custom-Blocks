@@ -18,7 +18,10 @@ import net.minecraft.tileentity.TileEntity;// any;
 @Mod(modid = "CustomBlocksCommon", name = "Smeagol's Custom Blocks Common", version = "1.0 for 1.5.2")
 @NetworkMod(clientSideRequired = true, serverSideRequired = true)
 public class ModCustomBlocks {
-
+	
+	
+	public static CustomPackLoader loadder;
+	
 	@Instance("ModCustomBlocks")
 	public static ModCustomBlocks instance;
 	
@@ -28,13 +31,14 @@ public class ModCustomBlocks {
 	/** 1 **/
 	@Mod.PreInit
 	public void preInit(FMLPreInitializationEvent event) {
-		CustomPackLoader loadder = new CustomPackLoader ();
+		loadder = new CustomPackLoader ();
 		loadder.load ();
 	}
 	
 	/** 2 **/
 	@Init
 	public void load(FMLInitializationEvent event) {
+		loadder.init ();
 	}
 
 	/** 3 **/

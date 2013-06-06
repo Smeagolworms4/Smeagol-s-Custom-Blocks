@@ -1,8 +1,7 @@
 {
-	"name":"block_test",
 	"initial_id":4000,
 	"label":"Block's Test",
-	"textures"{
+	"textures" {
 		"top   ":"blocks/test_t.png",
 		"bottom":"blocks/test_b.png",
 		"north" :"blocks/test_n.png",
