@@ -16,7 +16,7 @@ public class CustomPackFactory {
 	static ArrayList<String> listNamePack = new ArrayList<String>();
 	
 	/**
-	 * Crée un Custom pack
+	 * CrÃ©e un Custom pack
 	 * @param packFiles Zip file or Dir
 	 * @return
 	 * @throws Exception
@@ -29,7 +29,7 @@ public class CustomPackFactory {
 	}
 	
 	/**
-	 * Créee un Custom pack grace à un fichier zip
+	 * CrÃ©e un Custom pack grace Ã  un fichier zip
 	 * @param packFiles
 	 * @return
 	 * @throws Exception
@@ -40,7 +40,7 @@ public class CustomPackFactory {
 	}
 	
 	/**
-	 * Crée un Custom pack grace à un dossier
+	 * CrÃ©e un Custom pack grace Ã  un dossier
 	 * @param packFiles
 	 * @return
 	 * @throws Exception
@@ -50,14 +50,14 @@ public class CustomPackFactory {
 		
 		// Load info.json
 		
-		File infosPath = new File (packFiles, "infos.json");
+		File infosPath   = new File (packFiles, "infos.json");
 		String jsonInfos = Files.toString(infosPath, Charsets.UTF_8);
-		JSONObject root = (JSONObject) JSONValue.parse(jsonInfos);
+		JSONObject root  = (JSONObject) JSONValue.parse(jsonInfos);
 
-		String engineVersion = (String) root.get("engine_version");
-		String packVersion   = (String) root.get("pack_version");
-		String name          = (String) root.get("name");
-		String description   = (String) root.get("description");
+		String engineVersion = Util.toString (root.get("engine_version"));
+		String packVersion   = Util.toString (root.get("pack_version"));
+		String name          = Util.toString (root.get("name"));
+		String description   = Util.toString (root.get("description"));
 		
 		if (listNamePack.contains(name)) { throw new Exception ("The custom pack \"" + packFiles.getName() + "\" has a name already used by other pack"); }
 		if (name          == null)       { throw new Exception ("The custom pack \"" + packFiles.getName() + "\" has not name in infos.json"); }

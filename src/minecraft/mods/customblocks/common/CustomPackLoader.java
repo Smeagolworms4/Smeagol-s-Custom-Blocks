@@ -46,7 +46,7 @@ public class CustomPackLoader {
 	}
 	
 	/**
-	 * Crée la liste des éléments de tous les packs
+	 * CrÃ©e la liste des Ã©lÃ©ments de tous les packs
 	 */
 	public void init() {
 		for (CustomPack pack : packs) {
